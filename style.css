@@ -1,0 +1,638 @@
+
+:root {
+    --background: #080808;
+    --surface: #111111;
+    --surface-light: #171717;
+    --yellow: #f5ef00;
+    --white: #f4f4f4;
+    --gray: #999999;
+    --border: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* NAVEGACIÓN */
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 22px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--yellow);
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 9% 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-number {
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--yellow);
+}
+
+.hero h1 {
+    font-size: clamp(75px, 12vw, 160px);
+    line-height: .85;
+    letter-spacing: -9px;
+    margin: 35px 0;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.certification-heading h3 span {
+    color: var(--yellow);
+}
+
+.hero-description {
+    max-width: 400px;
+    color: var(--gray);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 16px 22px;
+    background: var(--yellow);
+    color: #080808;
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.main-button:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.main-button span {
+    font-size: 18px;
+}
+
+.hero-side {
+    position: absolute;
+    right: 9%;
+    bottom: 25%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-side p {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    line-height: 2;
+    color: var(--gray);
+}
+
+.side-line {
+    height: 80px;
+    width: 2px;
+    background: var(--yellow);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    color: var(--gray);
+    letter-spacing: 1px;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 120px 9%;
+    border-top: 1px solid var(--border);
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    font-size: clamp(48px, 7vw, 90px);
+    line-height: .95;
+    letter-spacing: -4px;
+    margin-top: 22px;
+}
+
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #b4b4b4;
+    white-space: pre-line;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.info-item {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.info-item span {
+    color: var(--yellow);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.info-item p {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+
+/* CERTIFICACIONES EN SOBRE MÍ */
+
+.obtained-certifications {
+    margin-top: 110px;
+    padding-top: 50px;
+    border-top: 1px solid var(--border);
+}
+
+.certification-heading h3 {
+    font-size: clamp(35px, 5vw, 60px);
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.certification-heading > p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+.obtained-list {
+    margin-top: 40px;
+}
+
+.obtained-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 30px;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+    transition: .3s;
+}
+
+.obtained-item span {
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    color: var(--yellow);
+}
+
+.obtained-item p {
+    font-size: 16px;
+}
+
+.obtained-item:hover {
+    padding-left: 12px;
+    color: var(--yellow);
+}
+
+
+/* INTERESES */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.interest-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 35px;
+    min-height: 330px;
+    position: relative;
+    transition: .3s;
+}
+
+.interest-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+}
+
+.card-number {
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.interest-icon {
+    font-size: 42px;
+    color: var(--yellow);
+    margin: 35px 0 20px;
+}
+
+.interest-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.interest-card p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.card-tag {
+    display: block;
+    margin-top: 30px;
+    font-family: "DM Mono", monospace;
+    color: var(--yellow);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* PROYECTOS */
+
+.project-list {
+    border-top: 1px solid var(--border);
+}
+
+.project-item {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    transition: .3s;
+}
+
+.project-item:hover {
+    padding-left: 15px;
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--yellow);
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.project-item h3 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin: 25px 0 15px;
+}
+
+.project-item p {
+    color: var(--gray);
+    max-width: 550px;
+    line-height: 1.8;
+}
+
+.project-category {
+    display: inline-block;
+    margin-top: 25px;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    color: var(--yellow);
+}
+
+
+/* HABILIDADES */
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.skill-group h3 {
+    font-family: "DM Mono", monospace;
+    color: var(--yellow);
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    border: 1px solid var(--border);
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #c6c6c6;
+    transition: .3s;
+}
+
+.skill-tags span:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+}
+
+
+/* CERTIFICACIONES */
+
+.section-description {
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 500px;
+    margin-top: -35px;
+    margin-bottom: 50px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.cert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: .3s;
+    scroll-margin-top: 30px;
+}
+
+.cert-card:hover {
+    border-color: var(--yellow);
+    transform: translateY(-5px);
+}
+
+.cert-preview {
+    background: #1a1a1a;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cert-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.cert-info {
+    padding: 25px;
+}
+
+.cert-type {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    color: var(--yellow);
+    letter-spacing: 1px;
+}
+
+.cert-info h3 {
+    font-size: 23px;
+    margin: 15px 0 8px;
+}
+
+.cert-info p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.cert-info .cert-date {
+    margin-top: 15px;
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    color: var(--yellow);
+}
+
+.cert-info .cert-code {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+}
+
+.cert-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: "DM Mono", monospace;
+    font-size: 11px;
+    color: var(--white);
+    border-bottom: 1px solid var(--yellow);
+    padding-bottom: 5px;
+    transition: .3s;
+}
+
+.cert-link:hover {
+    color: var(--yellow);
+}
+
+
+/* CONTACTO */
+
+.contact {
+    min-height: 550px;
+}
+
+.contact > p {
+    color: var(--gray);
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer p,
+.back-top {
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    color: var(--gray);
+}
+
+.back-top:hover {
+    color: var(--yellow);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 160px 25px 100px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+        letter-spacing: -5px;
+    }
+
+    .hero-side {
+        display: none;
+    }
+
+    .hero-bottom {
+        left: 25px;
+        right: 25px;
+        font-size: 8px;
+    }
+
+    .section {
+        padding: 85px 25px;
+    }
+
+    .section-heading h2 {
+        letter-spacing: -2px;
+    }
+
+    .interest-grid,
+    .cert-grid,
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .obtained-item {
+        grid-template-columns: 30px 1fr 20px;
+        gap: 12px;
+    }
+
+    .obtained-item p {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .footer p,
+    .back-top {
+        font-size: 8px;
+    }
+
+}
